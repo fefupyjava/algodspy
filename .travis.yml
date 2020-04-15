@@ -1,6 +1,6 @@
 language: python
 install: pip install flake8
 script: 
-  flake8
+  flake8 --ignore W293,W391,W292
   python -m unittest discover -s tests -v
   
