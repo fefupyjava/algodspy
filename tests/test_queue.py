@@ -12,13 +12,18 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(self.queue.data, self.data)
 
     def test_enqueue(self):
-        self.assertEqual(self.queue.enqueue(1), self.data.insert(0, 1))
+        self.queue.enqueue(1)
+        self.data.insert(0, 1)
+        self.assertEqual(self.queue.data, self.data)
 
     def test_dequeue(self):
         self.data.append(1)
         self.queue.enqueue(1)
-        print(self.queue.dequeue())
         self.assertEqual(self.queue.dequeue(), self.data.pop())
+
+    def test_dequeue_result(self):
+        print(self.queue.data)
+        self.assertEqual(self.queue.data, self.data)
 
     def test_size(self):
         self.data.append(2)
