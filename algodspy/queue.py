@@ -4,12 +4,12 @@ class Queue:
     def __init__(self):
         self.data = []
 
-    def __enqueue__(self, data):
+    def enqueue(self, data):
         self.data.insert(0, data)
 
-    def __dequeue__(self):
+    def dequeue(self):
         return self.data.pop()
 
-    def __size__(self):
+    def size(self):
         return len(self.data)
 
