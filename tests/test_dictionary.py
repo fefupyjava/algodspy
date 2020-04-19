@@ -18,7 +18,7 @@ class TestDictionary(unittest.TestCase):
     def test_value(self):
         self.dictionary.append('q', 1)
         self.data['q'] = 1
-        self.assertEqual(self.dictionary.value('q'), self.data['q'])    
+        self.assertEqual(self.dictionary.value('q'), self.data['q'])
         
     def test_change(self):
         self.dictionary.append('q', 1)
