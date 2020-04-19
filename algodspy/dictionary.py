@@ -3,14 +3,14 @@ class Dictionary:
         self.data = {}
         
     def append(self, key, value):
-        if self.data.get(key) == None:
+        if key not in self.data:
             self.data[key] = value
     
     def value(self, key):
         return self.data.get(key)
     
     def change(self, key, value):
-        if self.data.get(key):
+        if key in self.data:
             self.data[key] = value
         
     def size(self):
