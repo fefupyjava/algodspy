@@ -3,7 +3,7 @@ class QuickSort:
     def __init__(self):
         pass
 
-    def sort(self, data, reversed = False):
+    def sort(self, data, reversed=False):
         if len(data) <= 1:
             return data
         else:

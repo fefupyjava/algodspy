@@ -10,3 +10,10 @@ class TestQuickSort(unittest.TestCase):
         result = sorter.sort(data)
         test = sorted(data)
         self.assertEqual(result, test)
+
+    def test_sort_list2(self):
+        data = [6, 3, 9, 2, 8]
+        sorter = QuickSort()
+        result = sorter.sort(data)
+        test = sorted(data, reversed=True)
+        self.assertEqual(result, test)
