@@ -1,5 +1,5 @@
 import unittest
-from algodspy.insertion_sort import RadixSort
+from algodspy.radix_sort import RadixSort
 
 
 class TestRadixSort(unittest.TestCase):
