@@ -11,9 +11,9 @@ class TestQuickSort(unittest.TestCase):
         test = sorted(data)
         self.assertEqual(result, test)
 
-    def test_sort_list2(self):
+    def test_sort_list_reversed(self):
         data = [6, 3, 9, 2, 8]
         sorter = QuickSort()
-        result = sorter.sort(data)
-        test = sorted(data, reversed=True)
+        result = sorter.sort(data, reversed=True)
+        test = sorted(data, reverse=True)
         self.assertEqual(result, test)

@@ -11,23 +11,26 @@ class QuickSort:
             l = []
             m = []
             r = []
-            for x in data:
-                if reversed:
+            if reversed:
+                for x in data:
                     if x > border:
                         l.append(x)
                     elif x == border:
                         m.append(x)
                     else:
                         r.append(x)
-                else:
+                self.sort(l, True)
+                self.sort(r, True)
+            else:
+                for x in data:
                     if x < border:
                         l.append(x)
                     elif x == border:
                         m.append(x)
                     else:
                         r.append(x)
-            self.sort(l)
-            self.sort(r)
+                self.sort(l)
+                self.sort(r)
             k = 0
             for x in l + m + r:
                 data[k] = x
