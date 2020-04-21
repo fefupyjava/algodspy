@@ -8,31 +8,31 @@ class QuickSort:
             return data
         else:
             border = data[0]
-            l = []
-            m = []
-            r = []
+            left = []
+            middle = []
+            right = []
             if reversed:
                 for x in data:
                     if x > border:
-                        l.append(x)
+                        left.append(x)
                     elif x == border:
-                        m.append(x)
+                        middle.append(x)
                     else:
-                        r.append(x)
-                self.sort(l, True)
-                self.sort(r, True)
+                        right.append(x)
+                self.sort(left, True)
+                self.sort(right, True)
             else:
                 for x in data:
                     if x < border:
-                        l.append(x)
+                        left.append(x)
                     elif x == border:
-                        m.append(x)
+                        middle.append(x)
                     else:
-                        r.append(x)
-                self.sort(l)
-                self.sort(r)
+                        right.append(x)
+                self.sort(left)
+                self.sort(right)
             k = 0
-            for x in l + m + r:
+            for x in left + middle + right:
                 data[k] = x
                 k += 1
             return data
