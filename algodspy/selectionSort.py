@@ -1,22 +1,20 @@
 class SelectionSort:
-    def __init__(self, array, key):
+    def __init__(self, array):
         self.array_to_sort = array
-        self.key = key
-    def sort(self):
+    def sort(self, reverse=False):
+        sign = 1 if reverse == False else -1
         n = len(self.array_to_sort)
         for i in range(n):
             m = i
             for j in range(i, n):
-                if self.key * self.array_to_sort[j] < self.key * self.array_to_sort[m]:
+                if sign * self.array_to_sort[j] < sign * self.array_to_sort[m]:
                     m = j
             self.array_to_sort[i], self.array_to_sort[m] = self.array_to_sort[m], self.array_to_sort[i]
         return self.array_to_sort
 
 
-array = [int(i) for i in input('Введите список чисел: ').split()]
-key = int(input('Введите ключ!\nПо возрастанию 1, по убыванию -1: '))
-
-obj = SelectionSort(array, key)
-s = obj.sort()
+array = [4, 3, 5, 21, 43, 0, 23, 22]
+obj = SelectionSort(array)
+s = obj.sort(reverse=True)
 
 print(s)
