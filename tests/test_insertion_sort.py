@@ -1,6 +1,7 @@
 import unittest
 from algodspy.insertion_sort import InsertionSort
 
+
 class TestInsertionSort(unittest.TestCase):
 
     def test_sort_list(self):
