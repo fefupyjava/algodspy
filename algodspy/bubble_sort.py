@@ -9,7 +9,6 @@ class BubbleSort:
                     if data[j] > data[j + 1]:
                         data[j], data[j + 1] = data[j + 1], data[j]
             return data
-        
         if reverse:
             for i in range(len(data) - 1):
                 for j in range(len(data) - i - 1):
@@ -17,9 +16,7 @@ class BubbleSort:
                         data[j], data[j + 1] = data[j + 1], data[j]
         return data
 
-    #def sort_ascending(self, data):
-        
-    
-    #def sort_deccending(self, data):
-        
-        
+
+data = [2, 1, 3, 4, 5]
+BubbleSort.sort(1,data, reverse=False)
+print(data)

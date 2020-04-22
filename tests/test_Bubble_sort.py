@@ -14,5 +14,5 @@ class TestBubbleSort(unittest.TestCase):
         data = [2, 4, 3, 1, 5]
         test = sorted(data, reverse=True)
         sorter = BubbleSort()
-        result = sorter.sort(data)
+        result = sorter.sort(data, reverse=True)
         self.assertEqual(result, test)
