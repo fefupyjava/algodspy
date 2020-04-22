@@ -1,13 +1,17 @@
-class Selection_sort:
-    def __init__(self, array):
-        self.array = array
-    def sort(self, reverse=False):
-        sign = 1 if not reverse else -1
-        n = len(self.array)
+class SelectionSort:
+
+    def __init__(self):
+        pass
+
+    def sort(self, array, reverse=False):
+        n = len(array)
         for i in range(n):
             m = i
             for j in range(i, n):
-                if sign * self.array[j] < sign * self.array[m]:
+                if array[j] < array[m]:
                     m = j
-            self.array[i], self.array[m] = self.array[m], self.array[i]
-        return self.array
+            array[i], array[m] = array[m], array[i]
+        if reverse:
+            return array[::-1]
+        else:
+            return array
