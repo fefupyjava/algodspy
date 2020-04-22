@@ -1,6 +1,6 @@
 class Stack:
 
-    def __init__(self, array):
+    def __init__(self, array=[]):
         self.stack = array
 
     def append(self, value):
