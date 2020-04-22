@@ -12,8 +12,8 @@ class TestStack(unittest.TestCase):
         self.assertEqual(self.stack.data, self.data)
 
     def test_append(self):
-        self.data.append(3)
-        self.stack.append(3)
+        self.data.append(4)
+        self.stack.append(4)
         self.assertEqual(self.stack.data, self.data)
 
     def test_pop(self):
