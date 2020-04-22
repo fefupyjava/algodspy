@@ -11,3 +11,6 @@ class Stack:
 
     def __len__(self):
         return len(self.stack)
+
+    def __str__(self):
+        return f'{self.stack}'
