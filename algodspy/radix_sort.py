@@ -3,7 +3,7 @@ class RadixSort:
     def __init__(self):
         pass
 
-    def sort(self,data):
+    def sort(self, data, reverse=False):
         length = len(str(max(data)))
         for i in range(length):
             B = [[] for k in range(10)]
@@ -13,4 +13,7 @@ class RadixSort:
             data = []
             for k in range(10):
                 data = data + B[k]
-        return data
+        if reverse:
+            return data[::-1]
+        else:
+            return data
