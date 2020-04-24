@@ -6,7 +6,7 @@ class Fibonacci():
     def __naive(self, n):
         if n > 0:
             fib1 = fib2 = 1
-            for i in range(n - 2):
+            for _ in range(n - 2):
                 fib_sum = fib1 + fib2
                 fib1 = fib2
                 fib2 = fib_sum
@@ -25,11 +25,11 @@ class Fibonacci():
         fib[n] = self.__memoized(n - 1) + self.__memoized(n - 2)
         return fib[n]
 
-    def __dinamic(self, n):
+    def __dynamic(self, n):
         if n > 0:
             fib1 = 0
             fib2 = 1
-            for __ in range(n):
+            for _ in range(n):
                 fib1, fib2 = fib2, fib1 + fib2
             return fib1
 
@@ -40,5 +40,5 @@ class Fibonacci():
             return self.__recursive(n)
         elif kind == 'memoized':
             return self.__memoized(n)
-        elif kind == 'dinamic':
-            return self.__dinamic(n)
+        elif kind == 'dynamic':
+            return self.__dynamic(n)
