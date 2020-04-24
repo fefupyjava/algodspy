@@ -25,7 +25,7 @@ class TestQuickSort(unittest.TestCase):
         test = 2
         self.assertEqual(result, test)
 
-    def test_dinamic(self):
+    def test_dynamic(self):
         n = 4
         fib = Fibonacci()
         result = fib.run(n, 'dynamic')
