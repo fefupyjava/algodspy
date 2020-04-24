@@ -4,12 +4,14 @@ from algodspy.selection_sort import SelectionSort
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     string = '''<h1>Алгоритмы и структуры данных на пальцах</h1>
     <p><a href="/selection-sort">Сортировка выбором</a></p>
     '''
     return string
+
 
 @app.route('/selection-sort/')
 def selection_sort():
