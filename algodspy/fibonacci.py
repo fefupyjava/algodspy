@@ -42,5 +42,3 @@ class Fibonacci():
             return self.__memoized(n)
         elif kind == 'dinamic':
             return self.__dinamic(n)
-        else:
-            print('Error')
