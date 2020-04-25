@@ -4,16 +4,16 @@ class SelectionSort:
         pass
 
     def sort(self, data, reverse=False):
-        data_copy = data.copy()
-        n = len(data_copy)
+        data = data.copy()
+        n = len(data)
         for i in range(n):
             m = i
             for j in range(i, n):
-                if data_copy[j] < data_copy[m]:
+                if data[j] < data[m]:
                     m = j
-            data_copy[i], data_copy[m] = data_copy[m], data_copy[i]
+            data[i], data[m] = data[m], data[i]
         if reverse:
-            return data_copy[::-1]
+            return data[::-1]
         else:
-            return data_copy
+            return data
 

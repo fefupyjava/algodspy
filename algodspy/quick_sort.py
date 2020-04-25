@@ -4,26 +4,26 @@ class QuickSort:
         pass
 
     def sort(self, data, reversed=False):
-        data_copy = data.copy()
-        if len(data_copy) <= 1:
-            return data_copy
+        data = data.copy()
+        if len(data) <= 1:
+            return data
         else:
-            border = data_copy[0]
+            border = data[0]
             left = []
             middle = []
             right = []
             if reversed:
-                for x in data_copy:
+                for x in data:
                     if x > border:
                         left.append(x)
                     elif x == border:
                         middle.append(x)
                     else:
                         right.append(x)
-                self.sort(left, True)
-                self.sort(right, True)
+                left = self.sort(left, True)
+                right = self.sort(right, True)
             else:
-                for x in data_copy:
+                for x in data:
                     if x < border:
                         left.append(x)
                     elif x == border:
@@ -34,6 +34,6 @@ class QuickSort:
                 right = self.sort(right)
             k = 0
             for x in left + middle + right:
-                data_copy[k] = x
+                data[k] = x
                 k += 1
-            return data_copy
+            return data

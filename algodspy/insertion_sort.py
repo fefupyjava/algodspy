@@ -4,15 +4,15 @@ class InsertionSort:
         pass
 
     def sort(self, data, reverse=False):
-        data_copy = data.copy()
-        for i in range(1, len(data_copy)):
-            item = data_copy[i]
+        data = data.copy()
+        for i in range(1, len(data)):
+            item = data[i]
             j = i - 1
-            while j >= 0 and data_copy[j] > item:
-                data_copy[j + 1] = data_copy[j]
+            while j >= 0 and data[j] > item:
+                data[j + 1] = data[j]
                 j -= 1
-            data_copy[j + 1] = item
+            data[j + 1] = item
         if reverse:
-            return data_copy[::-1]
+            return data[::-1]
         else:
-            return data_copy
+            return data
