@@ -4,19 +4,20 @@ class HeapSort:
         pass
 
     def sort(self, data, reverse=False):
+        data_copy = data.copy()
         # построение кучи с конца до корня(0)
-        for i in range(len(data), -1, -1):
-            self.heapify(data, len(data), i)
+        for i in range(len(data_copy), -1, -1):
+            self.heapify(data_copy, len(data_copy), i)
 
         # Так как корень имеет наиб.значние ставим его в конец,
         # и для оставшихся элементов находим новый корень
-        for i in range(len(data) - 1, 0, -1):
-            data[0], data[i] = data[i], data[0]
-            self.heapify(data, i, 0)
+        for i in range(len(data_copy) - 1, 0, -1):
+            data_copy[0], data_copy[i] = data_copy[i], data_copy[0]
+            self.heapify(data_copy, i, 0)
         if reverse:
-            return data[::-1]
+            return data_copy[::-1]
         else:
-            return data
+            return data_copy
 
     # heapify - функция построения двоичной кучи с помощью списка
     # Замечание - заменить рекурсивную функцию !!!
