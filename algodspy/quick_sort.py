@@ -30,8 +30,8 @@ class QuickSort:
                         middle.append(x)
                     else:
                         right.append(x)
-                self.sort(left)
-                self.sort(right)
+                left = self.sort(left)
+                right = self.sort(right)
             k = 0
             for x in left + middle + right:
                 data_copy[k] = x
