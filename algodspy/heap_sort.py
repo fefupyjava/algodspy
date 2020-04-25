@@ -4,6 +4,7 @@ class HeapSort:
         pass
 
     def sort(self, data, reverse=False):
+        data = data.copy()
         # построение кучи с конца до корня(0)
         for i in range(len(data), -1, -1):
             self.heapify(data, len(data), i)

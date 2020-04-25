@@ -4,6 +4,7 @@ class QuickSort:
         pass
 
     def sort(self, data, reversed=False):
+        data = data.copy()
         if len(data) <= 1:
             return data
         else:
@@ -19,8 +20,8 @@ class QuickSort:
                         middle.append(x)
                     else:
                         right.append(x)
-                self.sort(left, True)
-                self.sort(right, True)
+                left = self.sort(left, True)
+                right = self.sort(right, True)
             else:
                 for x in data:
                     if x < border:
@@ -29,8 +30,8 @@ class QuickSort:
                         middle.append(x)
                     else:
                         right.append(x)
-                self.sort(left)
-                self.sort(right)
+                left = self.sort(left)
+                right = self.sort(right)
             k = 0
             for x in left + middle + right:
                 data[k] = x

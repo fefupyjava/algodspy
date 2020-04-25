@@ -4,6 +4,7 @@ class InsertionSort:
         pass
 
     def sort(self, data, reverse=False):
+        data = data.copy()
         for i in range(1, len(data)):
             item = data[i]
             j = i - 1

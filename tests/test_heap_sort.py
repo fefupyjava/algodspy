@@ -18,4 +18,4 @@ class TestHeapSort(unittest.TestCase):
         data = sorted(data, reverse=True)
         self.assertEqual(sorted_heap_sort, data)
     # возможно нужен тест на большое кол-во исходных данный
-    # з-за проблем питона с глубиной рекурсии
+    # из-за проблем питона с глубиной рекурсии

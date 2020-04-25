@@ -10,7 +10,7 @@ class TestBubbleSort(unittest.TestCase):
         result = sorter.sort(data)
         self.assertEqual(result, test)
 
-    def test_sort_decending(self):
+    def test_sort_descending(self):
         data = [2, 4, 3, 1, 5]
         test = sorted(data, reverse=True)
         sorter = BubbleSort()
