@@ -40,7 +40,7 @@ class Fast_Pow():
             self.n = (self.n - 1) / 2
             return y * self.__recursive()
     
-    def run(self, n, kind):
+    def run(self, kind):
         if kind == 'naive':
             return self.__naive()
         elif kind == 'recursive':
