@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+  Алгоритмы сортировки
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+          <h3>Сортируемый массив:</h3> 
+          <p>{{ context.data_str }}</p>
+      </div>
+    </div>
+    {% for sorting in context.sortings %}
+    <div class="row">
+      <div class="col-sm">
+        <h3>{{ sorting.name }}</h3>
+        <p>{{ sorting.result }}</p>
+      </div>
+    </div>        
+    {% endfor %}
+    
+  </div>
+
+{% endblock content %}
