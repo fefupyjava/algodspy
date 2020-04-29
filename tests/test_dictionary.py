@@ -31,4 +31,3 @@ class TestDictionary(unittest.TestCase):
         self.dictionary.append('q', 1)
         self.data['q'] = 1
         self.assertEqual(self.dictionary.size(), len(self.data))
-    

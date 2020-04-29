@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Алгоритмы и структуры данных на пальцах
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="row m-3 p-3">
+    <div class="col-sm">
+      <h1>Алгоритмы и структуры данных на пальцах</h1>
+    </div>
+  </div>
+  <div class="row m-3">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="https://vegibit.com/wp-content/uploads/2020/01/Python-Data-Structures.png" class="card-img-top" alt="Структуры данных">
+        <div class="card-body">
+          <h5 class="card-title">Структуры данных</h5>
+          <p class="card-text">Списки, очереди, деревья и т.д.</p>
+          <a href="/data-structures" class="btn btn-primary">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.programiz.com/sites/tutorial2program/files/Selection-sort-0-comparision.png" class="card-img-top" alt="Алгоритмы сортировки">
+        <div class="card-body">
+          <h5 class="card-title">Алгоритмы сортировки</h5>
+          <p class="card-text">Пузырьком, вставками, выбором и т.д.</p>
+          <a href="/sortings" class="btn btn-primary">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
