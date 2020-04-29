@@ -16,4 +16,10 @@ class BucketSort:
             else:
                 buckets[n - 1].append(alist[i])
     
+        result = []
+        for i in range(n):
+            result = result + buckets[i]
+    
+        return result
+
 
