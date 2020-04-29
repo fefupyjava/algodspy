@@ -33,7 +33,7 @@ class Pack:
                 answer.append(self.items[i - 1])
                 size -= self.items[i - 1][0]
  
-        return answer
+        return answer[::-1]
  
  
     def run(self, size, kind):
