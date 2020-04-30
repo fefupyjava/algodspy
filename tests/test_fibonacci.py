@@ -2,7 +2,7 @@ import unittest
 from algodspy.fibonacci import Fibonacci
 
 
-class TestQuickSort(unittest.TestCase):
+class TestFibonacci(unittest.TestCase):
 
     def test_naive(self):
         n = 1
