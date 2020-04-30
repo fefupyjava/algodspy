@@ -34,7 +34,7 @@ class BinarySearch:
                 else:
                     return self.__recursive(data[mid+1:], x)
     
-    def run(self, data, x, kind):
+    def run(self, data, x, kind='naive'):
         if kind == 'naive':
             return self.__naive(data, x)
         if kind == 'recursive':
