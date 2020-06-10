@@ -8,15 +8,21 @@ class TowerOfHanoi:
 
     def __recursive(self, n, start, finish):
         if n == 1:
-            print(n, start, finish)
+            lst = [n, start, finish]
+            hanoi.append(lst)
         else:
             tmp = 6 - start - finish
             self.__recursive(n - 1, start, tmp)
-            print(n, start, finish)
+            lst = [n, start, finish]
+            hanoi.append(lst)
             self.__recursive(n - 1, tmp, finish)
+        return hanoi
 
     def run(self, n, kind):
         if kind == 'naive':
             return self.__naive(n)
-        elif kind == 'recursive':
+        if kind == 'recursive':
+
             return self.__recursive(n, 1, 3)
+
+hanoi = []
